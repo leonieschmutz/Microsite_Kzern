@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+:root {
+  --bg-block-color: #3d3d3d;
+  --bg-color: #9f9f9f;
+  --bg-line-block-color: #ffe100;
+}
+
 a {
   color: inherit;
 }
@@ -21,6 +27,47 @@ video {
 .row > [class^="col-"] {
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
+  // background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: 548px;
+}
+
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img {
+  background-color: #fff;
+  width: 420px;
+  height: 203px;
+}
+
+.block {
+  // background-color: var(--bg-block-color);
+  background-color: var(--bg-block-color);
+}
+
+.line {
+  background-color: var(--bg-line-block-color);
 }
