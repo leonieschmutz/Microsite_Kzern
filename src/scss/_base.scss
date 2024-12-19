@@ -36,23 +36,47 @@ body {
 }
 
 h1 {
-  font-size: 548px;
+  font-size: 118px;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 548px;
+  }
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 16px;
   text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 32px;
+  }
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
+@media (min-width: 992px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
 p {
-  font-size: 22px;
+  font-size: 14px;
   background-color: var(--bg-line-block-color);
   padding: 10px 10px 0 10px;
+}
+
+@media (min-width: 992px) {
+  p {
+    font-size: 22px;
+  }
 }
 
 a {

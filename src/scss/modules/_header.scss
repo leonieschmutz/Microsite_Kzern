@@ -7,8 +7,14 @@
 }
 
 .headerUnderTitle {
-  font-size: 40px;
+  font-size: 20px;
   background-color: var(--bg-color);
+}
+
+@media (min-width: 992px) {
+  .headerUnderTitle {
+    font-size: 40px;
+  }
 }
 
 .headerLine1,
