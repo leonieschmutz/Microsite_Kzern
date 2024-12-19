@@ -79,12 +79,13 @@
   align-items: center;
   gap: 0.25rem;
   font-family: "ES Klarheit Kurrent";
-  font-size: 20px;
+  margin-left: 10px;
   font-weight: 600;
   text-transform: uppercase;
 
   @media screen and (max-width: 1300px) {
     margin-top: 2rem;
+    margin-left: 0;
   }
 
   &.burger-menu {
@@ -102,5 +103,7 @@
   * {
     white-space: nowrap;
     padding: 0;
+    background-color: transparent;
+    font-size: 20px;
   }
 }
