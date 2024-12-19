@@ -1,6 +1,106 @@
 .nav {
+  &.open {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color);
+    padding: 4rem 1rem 1rem 1rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .close-menu-btn {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 60px;
+    }
+
+    .language-wrapper {
+      display: flex;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    list-style: none;
+    gap: 1rem;
+
+    @media screen and (max-width: 1300px) {
+      display: none;
+      gap: 2rem;
+    }
+
+    li a {
+      font-family: "ES Klarheit Kurrent";
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .close-menu-btn {
+    display: none;
+  }
+}
+
+.btn-wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: end;
+}
+
+.burger-menu-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: 1300px) {
+    display: none;
+  }
+}
+
+#lang-nav-desktop {
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+}
+
+.language-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: "ES Klarheit Kurrent";
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1300px) {
+    margin-top: 2rem;
+  }
+
+  &.burger-menu {
+    display: none;
+  }
+
+  .current-lang {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 9.5%; /* 1.9px */
+    text-underline-offset: auto;
+  }
+
+  * {
+    white-space: nowrap;
+    padding: 0;
+  }
 }
