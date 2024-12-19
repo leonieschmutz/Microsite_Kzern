@@ -1,0 +1,38 @@
+.accordions {
+  .wrapper-accordion {
+    display: flex;
+    gap: 12px;
+
+    .accordion {
+      background-color: var(--bg-line-block-color);
+      padding: 12px;
+      width: 100%;
+    }
+
+    .label {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .label button {
+      background: transparent;
+      border: none;
+      padding: 0;
+      width: 100%;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    .content {
+      height: 0;
+      overflow: hidden;
+    }
+    .block {
+      background: var(--bg-block-color);
+      width: 22%;
+    }
+  }
+}
