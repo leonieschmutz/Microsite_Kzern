@@ -3,24 +3,49 @@
 }
 
 .sectionEndBlock {
-  height: 68px;
+  height: 34px;
+}
+
+@media (min-width: 992px) {
+  .sectionEndBlock {
+    height: 68px;
+  }
 }
 
 .sectionEspace {
   p {
-    padding-bottom: 192px;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: 992px) {
+    p {
+      padding-bottom: 192px;
+    }
   }
 }
 
 .sectionAssociation {
   p {
-    padding-bottom: 352px;
+    padding-bottom: 107px;
+  }
+
+  @media (min-width: 992px) {
+    p {
+      padding-bottom: 352px;
+    }
   }
 }
 
 .sectionAssociationCollaboration {
-  padding-bottom: 105px;
   background-color: var(--bg-line-block-color);
+  p {
+    padding-bottom: 0;
+  }
+  @media (min-width: 992px) {
+    p {
+      padding-bottom: 105px;
+    }
+  }
 }
 
 .sectionAssociationText {
@@ -28,7 +53,14 @@
 }
 
 .sectionEvent {
+  margin: 81px 0;
   h2 {
     background-color: var(--bg-line-block-color);
+  }
+}
+
+@media (min-width: 992px) {
+  .sectionEvent {
+    margin: 200px 0;
   }
 }

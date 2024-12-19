@@ -1,21 +1,52 @@
 .headerLeftBlock {
-  height: 380px;
+  height: 289px;
+}
+
+@media (min-width: 992px) {
+  .headerLeftBlock {
+    height: 380px;
+  }
 }
 
 .headerRightBlock {
-  height: 355px;
+  height: 241px;
+}
+
+@media (min-width: 992px) {
+  .headerRightBlock {
+    height: 355px;
+  }
 }
 
 .headerUnderTitle {
-  font-size: 40px;
+  font-size: 20px;
   background-color: var(--bg-color);
+}
+
+@media (min-width: 992px) {
+  .headerUnderTitle {
+    font-size: 40px;
+  }
 }
 
 .headerLine1,
 .headerLine2 {
-  height: 29px;
+  height: 17px;
+}
+
+@media (min-width: 992px) {
+  .headerLine1,
+  .headerLine2 {
+    height: 29px;
+  }
 }
 
 .headerEndBlock {
-  height: 404px;
+  height: 202px;
+}
+
+@media (min-width: 992px) {
+  .headerEndBlock {
+    height: 404px;
+  }
 }
