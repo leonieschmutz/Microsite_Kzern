@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
   // BURGER MENU JS
@@ -55,5 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
       // On vient ensuite ajouter la class open à l'accordéon
       accordionContent.classList.toggle("open");
     });
+  });
+
+  // ANIMATION
+  const sectionTitlesAnim = document.querySelectorAll(".section-title-anim");
+  sectionTitlesAnim.forEach((sectionTitleAnim) => {
+    const trigger = sectionTitleAnim.closest("section");
+    gsap.to(sectionTitleAnim, {
+      flex: 1,
+      duration: 2.5,
+      scrollTrigger: trigger,
+    });
+  });
+
+  gsap.to(".square-anim", {
+    width: "100%",
+    duration: 2.5,
   });
 });
