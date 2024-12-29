@@ -6,320 +6,190 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-sm-6 headerLeftBlock block"></div>
-          <div class="col-lg-7 col-sm-6 headerRightBlock block"></div>
-          <div class="col-lg-7 offset-lg-5">
-            <div class="btn-wrapper">
-              <button type="button" class="burger-menu-btn">
-                <svg
-                  width="117"
-                  height="37"
-                  viewBox="0 0 117 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <line
-                    y1="2.5"
-                    x2="117"
-                    y2="2.5"
-                    stroke="black"
-                    stroke-width="5"
-                  />
-                  <line
-                    y1="18.5"
-                    x2="117"
-                    y2="18.5"
-                    stroke="black"
-                    stroke-width="5"
-                  />
-                  <line
-                    y1="34.5"
-                    x2="117"
-                    y2="34.5"
-                    stroke="black"
-                    stroke-width="5"
-                  />
-                </svg>
-              </button>
+  <body class="bg-gray">
+    <div class="container">
+      <header class="grid grid-cols-12 gap-2.5">
+        <div
+          aria-hidden="true"
+          class="bg-gray-dark desktop:col-span-5 col-span-6 h-[380px]"
+        ></div>
+        <div class="h-full desktop:col-span-7 col-span-6 flex flex-col">
+          <div
+            aria-hidden="true"
+            class="bg-gray-dark flex-1 ml-[-0.625rem] desktop:ml-0 w-[calc(100%+0.625rem)] desktop:w-full"
+          ></div>
+          <div class="flex justify-end desktop:hidden mt-2.5 desktop:mt-0">
+            <button
+              type="button"
+              class="bg-transparent border-none cursor-pointer"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="menu-nav"
+              id="menu-nav-btn"
+            >
+              <svg
+                width="117"
+                height="37"
+                viewBox="0 0 117 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  y1="2.5"
+                  x2="117"
+                  y2="2.5"
+                  stroke="black"
+                  stroke-width="5"
+                />
+                <line
+                  y1="18.5"
+                  x2="117"
+                  y2="18.5"
+                  stroke="black"
+                  stroke-width="5"
+                />
+                <line
+                  y1="34.5"
+                  x2="117"
+                  y2="34.5"
+                  stroke="black"
+                  stroke-width="5"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav id="menu-nav">
+            <ul class="flex justify-between gap-2 desktop:mb-[-0.4rem]">
+              <li>
+                <a href="#espace" class="heading-3">Espace</a>
+              </li>
+              <li>
+                <a href="#technologie" class="heading-3">Technologie</a>
+              </li>
+              <li>
+                <a href="#association" class="heading-3">Association</a>
+              </li>
+              <li>
+                <a href="#projet" class="heading-3">Projet</a>
+              </li>
+              <li>
+                <a href="#glossaire" class="heading-3">Glossaire</a>
+              </li>
+              <li>
+                <a href="#contact" class="heading-3">Contact</a>
+              </li>
+            </ul>
+            <div
+              class="heading-3 items-center gap-2 desktop:hidden flex desktop:mt-0 mt-2"
+            >
+              <p class="decoration-[1.9px] underline underline-offset-2">FR</p>
+              <span>/</span>
+              <a
+                href="#"
+                class="heading-3"
+                aria-label="Aller sur la page en allemand"
+                >DE</a
+              >
             </div>
-            <nav class="nav">
-              <ul>
-                <li><a href="#espace">Espace</a></li>
-                <li><a href="#technologie">Technologie</a></li>
-                <li><a href="#association">Association</a></li>
-                <li><a href="#projet">Projet</a></li>
-                <li><a href="#glossaire">Glossaire</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-              <div class="language-wrapper burger-menu">
-                <p class="current-lang">FR</p>
-                <span>/</span>
-                <a href="#">DE</a>
-              </div>
-              <button type="button" class="close-menu-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 50 50"
-                >
-                  <path
-                    d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
-                  ></path>
-                </svg>
-              </button>
-            </nav>
+            <button type="button" id="close-menu-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+                ></path>
+              </svg>
+            </button>
+          </nav>
+        </div>
+        <h1 class="col-span-12">
+          <img src="img/LogoKzern.svg" alt="Logo Kzern" />
+        </h1>
+        <div class="col-span-12 flex gap-2.5 items-center">
+          <p
+            class="md:text-[2.5rem] text-[1.5rem] leading-[1] mr-2 sm:mr-4 md:mr-8"
+          >
+            espace sonore immersif
+          </p>
+          <div
+            class="flex-1 desktop:bg-yellow bg-gray-dark h-[17px] md:h-[29px] self-center"
+            aria-hidden="true"
+          ></div>
+          <div class="heading-3 hidden items-center gap-2 desktop:flex">
+            <p class="decoration-[1.9px] underline underline-offset-2">FR</p>
+            <span>/</span>
+            <a
+              href="#"
+              class="heading-3"
+              aria-label="Aller sur la page en allemand"
+              >DE</a
+            >
           </div>
-          <div class="col-12 h1">
-            <img src="/src/img/LogoKzern.svg" alt="" />
-          </div>
+        </div>
 
-          <div class="row m-0 g-0 align-items-center">
-            <p class="col-lg-4 col-sm-8 headerUnderTitle">
-              espace sonore immersif
-            </p>
-            <div class="col-lg-7 col-sm-4 headerLine1 line"></div>
-            <div class="col-lg-1">
-              <div class="language-wrapper" id="lang-nav-desktop">
-                <p class="current-lang">FR</p>
-                <span>/</span>
-                <a href="#">DE</a>
-              </div>
-            </div>
-            <div class="col-lg-12 col-sm-12 headerLine2 line"></div>
-          </div>
-          <div class="col-lg-12 col-sm-12 headerEndBlock block"></div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="section sectionEspace" id="espace">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 l-title g-0 m-0">
-              <h2>Espace</h2>
-              <div class="block l-title-block"></div>
-            </div>
-            <div class="col-lg-3 col-sm-4 img"></div>
-            <div class="col-lg-6 offset-1 col-sm-8 p-0">
-              <p>
-                La Kzern est une salle équipée des dernières technologies pour
-                la création d’espaces sonores tridimensionnels ou plus largement
-                appelés Immersifs. Installée sur le site de l’ancienne caserne
-                militaire de Fribourg, elle a été aménagée et optimisée
-                acoustiquement depuis Juin 2024. Elle propose dorénavant un
-                espace d’écoute et de création pouvant accueillir jusqu’à 50
-                personnes ou 25 matelas dans le cadre des voyages sonores.
-                <br />
-                <br />
-                Cet espace intime de partage de 10m sur 10m se prête aussi bien
-                à l’émotion de l’écoute spatiale d’un ou plusieurs musiciens que
-                l’écoute active lors de diffusions d’oeuvres sonores
-                multicanales.
-              </p>
-            </div>
-            <div class="col-lg-12 col-sm-12 sectionEndBlock block"></div>
-          </div>
-        </div>
-      </div>
-      <div class="section sectionTechnologie" id="technologie">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 l-title g-0 m-0">
-              <h2>Technologie immersive</h2>
-              <div class="block l-title-block"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section sectionAssociation" id="association">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 l-title g-0 m-0">
-              <h2>ASSOCIATION</h2>
-              <div class="block l-title-block"></div>
-            </div>
-            <div class="col-lg-3 col-sm-4 img"></div>
-            <div class="col-lg-6 offset-1 col-sm-8 p-0">
-              <p>
-                L’association SweetSpot a pour objectif de promouvoir la
-                création et la diffusion de musiques immersives, de soutenir les
-                productions technologies médiatiques innovantes ainsi que les
-                artistes désirant inspirer un public diversifié.
-                <br /><br />Voyages sonores immersifs, concerts avec acoustique
-                augmentée, performances sonores spatialisées, soirées d’écoute
-                d’œuvres multicanales, workshops sur le son immersif, résidences
-                sont autant de pistes explorées afin de partager cet incroyable
-                univers en marche que sont l’écoute et la création immersive.<br />
-                <br />
-                Actuellement, l’activité se partage entre recherche de fonds et
-                accueil d’artistes pour préparer le lieu à des rencontres
-                publiques régulières au travers de différentes propositions dès
-                le mois de septembre 2025.
-              </p>
-            </div>
-            <div
-              class="col-lg-5 col-sm-2 sectionAssociationLeftBlock block"
-            ></div>
-            <div class="col-lg-6 col-sm-10 sectionAssociationCollaboration">
-              <h3>COLLABORATIONS</h3>
-              <p>
-                Couleur 3, Espace 2, Festival des Musiques Sacrées de Fribourg,
-                Ville de Fribourg (Tinguely 2016), Festival Belluard Bollwerk
-                2020 et 2022, Nouveau Monde, SMEM, eikon, Conservatoire de
-                Fribourg, HEMU, Festival des Lumières de Morat 2021 et 2022,
-                EPFL+ ECAL lab
-              </p>
-            </div>
-            <div class="col-lg-12 col-sm-12 sectionEndBlock block"></div>
-          </div>
-        </div>
-      </div>
-      <div class="section sectionProjet" id="projet">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 l-title g-0 m-0">
-              <h2>Projet</h2>
-              <div class="block l-title-block"></div>
-            </div>
-            <div class="col-lg-4 col-sm-9 sectionAssociationText">
-              <h3>Partage</h3>
-              <p>
-                Organisation de concerts intimistes spatialisés pour un public
-                de 50 personnes  Organisation  d’expériences uniques au travers
-                d’écoutes spatialisées,de voyages sonores en chaises longues ou
-                couchés, d’installations ou de performances.
-              </p>
-              <h3>Résidence</h3>
-              <p>
-                Accueil d’artiste sonore, de musicien ou de petite formation sur
-                plusieurs jours Productions de plusieurs concerts  ou
-                propositions immersives pendant cette durée.
-              </p>
-              <h3>Échange</h3>
-              <p>
-                Collaboration avec des lieux similaires en Suisse et en Europe
-                Intégration du réseau international Indream ( bibliothèque
-                partagée d’oeuvres immersives multicanales )
-              </p>
-              <h3>WORKSHOP, FORMATIONS, COLLABORATIONS</h3>
-            </div>
-            <div class="col-lg-8 col-sm-4">
-              <div class="col-lg-2 col-sm-4 img"></div>
-              <div class="col-lg-3 col-sm-4 img"></div>
-              <div class="col-lg-3 col-sm-4 img"></div>
-              <div class="col-lg-3 col-sm-4 img"></div>
-              <div class="col-lg-3 col-sm-4 img"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sectionPhraseAccroche">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-lg-6 col-sm-2 sectionPhraseAccrocheLeftBlock block"
-            ></div>
-            <p class="col-lg-6 col-sm-10">
-              En chaises longues, allongé-e-s, debout, en mouvement, entouré-e-s
-              de 50 hauts parleurs ou au casque, nous nous réjouissons
-              d’expérimenter et de parcourir avec vous ces autres espaces
-              d’écoute
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="sectionGlossaire" id="glossaire">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 l-title g-0 m-0">
-              <h2>Glossaire</h2>
-              <div class="block l-title-block"></div>
-            </div>
-            <div class="col-12 accordions">
-              <div class="wrapper-accordion">
-                <div
-                  class="col-lg-6 col-sm-2 g-0 p-0 sectionPhraseAccrocheLeftBlock block"
-                ></div>
-                <div class="accordion col-lg-3 offset-lg-5 g-0 p-0">
-                  <div class="label">
-                    <button type="button">Son 3D</button>
-                    <span class="arrow">↓</span>
-                  </div>
-                  <div class="content">
-                    est un terme générique désignant les formats pouvant être
-                    utilisés pour enregistrer et reproduire le son dans
-                    l’espace. Selon la technologie, différentes quantités
-                    d'informations sonores directionnelles sont obtenues. Par
-                    exemple, le son 3D peut être implémenté aux formats
-                    Ambisonics, VBAP, synthèse de champ d'onde, musique Dolby
-                    Atmos, son surround (5.1, 7.1, 8.1) ou binaural, notamment
-                    pour les écouteurs.
-                  </div>
-                </div>
-                <div
-                  class="col-lg-2 col-sm-2 g-0 p-0 sectionPhraseAccrocheLeftBlock block"
-                ></div>
-                <div class="accordion col-lg-3 offset-lg-2 g-0 p-0">
-                  <div class="label">
-                    <button type="button">Musique acousmatique</button>
-                    <span class="arrow">↓</span>
-                  </div>
-                  <div class="content">
-                    fait référence à des morceaux qui ne peuvent être
-                    joués/reproduits que via des haut-parleurs. Lors des
-                    concerts, les sources sonores ne sont pas visibles et ne
-                    peuvent souvent pas être identifiées. L'intention de la
-                    musique acousmatique est souvent de créer une situation d'«
-                    écoute pure » dans laquelle les oreilles ne sont pas
-                    distraites par des personnes visibles ou des sources sonores
-                    telles que des instruments. La musique acousmatique ne peut
-                    pas être clairement distinguée de la musique
-                    électroacoustique et constitue également un courant au sein
-                    de la grande variété de musique composée regroupée sous le
-                    nom de Neue Musik.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sectionEvent">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-lg-5 col-sm-2 sectionPhraseAccrocheLeftBlock block"
-            ></div>
-            <h2 class="col-lg-7 col-sm-10">
+        <div
+          class="col-span-12 bg-yellow h-[29px] self-center desktop:block hidden"
+          aria-hidden="true"
+        ></div>
+      </header>
+
+      <main class="mt-1 desktop:mt-2.5">
+        <div
+          aria-hidden="true"
+          class="bg-gray-dark w-full desktop:h-[404px] h-[202px]"
+        ></div>
+
+        <include src="./partials/espace.html"></include>
+
+        <include src="./partials/technologie.html"></include>
+
+        <include src="./partials/association.html"></include>
+
+        <include src="./partials/projet.html"></include>
+
+        <include src="./partials/glossaire.html"></include>
+
+        <section class="grid grid-cols-12 gap-2.5 my-20 md:my-[120px]">
+          <div
+            class="col-span-2 md:col-span-5 bg-gray-dark"
+            aria-hidden="true"
+          ></div>
+          <div class="col-span-10 md:col-span-7 bg-yellow p-2.5">
+            <h3 class="heading-3">
               Dès Septembre 2025 : LANCEMENT de la SAISON 1
-            </h2>
+            </h3>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="grid grid-cols-12 gap-2.5">
+        <img
+          src="./img/LogoKzern.svg"
+          alt="Logo de Kzern"
+          class="col-span-6 self-end"
+        />
+        <div
+          class="col-span-6 lg:col-span-5 bg-yellow gap-8 p-2.5 flex flex-col lg:flex-row justify-between items-start"
+        >
+          <div class="text-base">
+            <p>KZERN</p>
+            <p>Association SweetSpot</p>
+            <p>Av. du Général-Guisan 25, 1700 Fribourg</p>
+          </div>
+          <div class="text-base">
+            <a href="tel:+417945565578">+41 79 45 56 55 78</a>
           </div>
         </div>
-      </div>
-    </main>
-    <footer id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-sm-6 g-0 p-0 footerTitle">
-            <p>Kzern</p>
-          </div>
-          <div class="col-sm-5 col-lg-6 g-0 p-0 footerAddress">
-            <p>
-              KZERN<br />
-              Association SweetSpot<br />
-              Av. du Général-Guisan 25,<br />
-              1700 Fribourg
-            </p>
-          </div>
-          <div class="col-lg-12 col-sm-12 sectionEndBlock block"></div>
-        </div>
-      </div>
-    </footer>
+        <div
+          class="col-span-12 bg-gray-dark h-[29px] lg:h-[68px]"
+          aria-hidden="true"
+        ></div>
+      </footer>
+    </div>
+
     <script src="js/main.js" type="module"></script>
   </body>
 </html>

@@ -1,17 +1,24 @@
+import gsap from "gsap";
+
 document.addEventListener("DOMContentLoaded", () => {
-  const burgerMenuBtn = document.querySelector(".burger-menu-btn");
-  const closeBurgerMenuBtn = document.querySelector(".close-menu-btn");
-  const nav = document.querySelector(".nav");
+  // BURGER MENU JS
+  const burgerMenuBtn = document.querySelector("#menu-nav-btn");
+  const closeBurgerMenuBtn = document.querySelector("#close-menu-btn");
+  const nav = document.querySelector("#menu-nav");
 
   burgerMenuBtn.addEventListener("click", () => {
     nav.classList.add("open");
+    burgerMenuBtn.setAttribute("aria-expanded", true);
     document.querySelector("body").style.overflow = "hidden";
   });
 
   closeBurgerMenuBtn.addEventListener("click", () => {
     nav.classList.remove("open");
+    burgerMenuBtn.setAttribute("aria-expanded", false);
     document.querySelector("body").style.overflow = "auto";
   });
+
+  // ACCORDION JS
   // Sélectionne chaque accordéon sur la page HTML
   const accordions = document.querySelectorAll(".accordion");
 
@@ -28,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (accordionContent.classList.contains("open")) {
         gsap.to(accordionContent, {
           height: 0,
-          duration: 1,
+          duration: 0.5,
         });
         gsap.to(accordionArrow, {
           rotate: 0,
@@ -38,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         gsap.to(accordionContent, {
           height: "auto",
-          duration: 1,
+          duration: 0.5,
         });
         gsap.to(accordionArrow, {
           rotate: 180,

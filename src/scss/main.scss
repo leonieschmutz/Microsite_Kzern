@@ -1,11 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "font";
 @import "base";
-@import "layout";
-@import "modules/example";
 @import "modules/nav";
-@import "modules/section";
-@import "modules/footer";
 @import "modules/accordions";
-@import "bootstrap/scss/bootstrap-grid";
-@import "variables";
-@import "modules/header";

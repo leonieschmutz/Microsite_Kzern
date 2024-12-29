@@ -5,7 +5,8 @@
   "scripts": {
     "clean:output": "rimraf dist",
     "clean:cache": "rimraf .parcel-cache",
-    "dev": "npm run clean:cache && parcel src/index.html",
+    "watch-css": "tailwindcss build -i ./src/main.scss -o ./public/main.scss --watch",
+    "dev": "npm run clean:cache && parcel src/index.html && watch-css ",
     "build": "npm run clean:output && parcel build src/index.html --public-url '.' --no-cache"
   },
   "repository": {
@@ -33,13 +34,15 @@
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0",
     "parcel-namer-rewrite": "^2.10.3-rc.2",
+    "postcss": "^8.4.49",
     "posthtml-extend": "^0.6.5",
     "posthtml-include": "^2.0.1",
     "posthtml-inline-svg": "^0.2.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "gsap": "^3.12.5"
   }
 }
