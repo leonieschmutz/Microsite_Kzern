@@ -11,11 +11,7 @@ html {
 }
 
 a {
-  @apply text-black transition-colors;
-
-  &:hover {
-    @apply text-gray-dark;
-  }
+  @apply text-black hover:text-gray-dark transition-colors;
 }
 
 img,
