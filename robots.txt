@@ -1,0 +1,8 @@
+# Bloquer l'accès aux répertoires sensibles
+User-agent: *
+
+# Autoriser tout le reste
+Allow: /
+
+# Spécifier le chemin vers le fichier sitemap
+Sitemap: https://kzern.com/sitemap.xml
