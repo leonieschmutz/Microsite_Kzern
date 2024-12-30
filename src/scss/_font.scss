@@ -12,10 +12,17 @@
       url("../fonts/ESKlarheitKurrent-Smbd.woff2") format("woff2");
     font-weight: 600;
   }
+
+  @font-face {
+    font-family: "ES Klarheit Kurrent";
+    src: url("../fonts/ESKlarheitKurrent-Bk.woff") format("woff"),
+      url("../fonts/ESKlarheitKurrent-Bk.woff2") format("woff2");
+    font-weight: 500;
+  }
 }
 
 .heading-2 {
-  @apply lg:text-[2rem] text-[1rem] font-sans font-semibold	uppercase;
+  @apply lg:text-[2rem] text-[1rem] font-sans font-normal	uppercase;
 }
 
 .heading-3 {
@@ -23,5 +30,5 @@
 }
 
 .text-base {
-  @apply text-[0.875rem] lg:text-[1.375rem] font-semibold font-sans;
+  @apply text-[0.875rem] lg:text-[1.375rem] font-sans;
 }
