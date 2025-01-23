@@ -43,6 +43,9 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "i18next": "^24.2.1",
+    "node-polyglot": "^2.6.0",
+    "static-i18n": "^0.2.10"
   }
 }
