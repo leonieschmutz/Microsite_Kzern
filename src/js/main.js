@@ -15,10 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("body").style.overflow = "hidden";
   });
 
-  closeBurgerMenuBtn.addEventListener("click", () => {
+  const closeMenu = () => {
     nav.classList.remove("open");
     burgerMenuBtn.setAttribute("aria-expanded", false);
     document.querySelector("body").style.overflow = "auto";
+  };
+
+  closeBurgerMenuBtn.addEventListener("click", closeMenu);
+
+  nav.querySelectorAll("li a").forEach((menuItem) => {
+    menuItem.addEventListener("click", closeMenu);
   });
 
   // ACCORDION JS
